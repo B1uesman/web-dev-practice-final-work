@@ -1,13 +1,13 @@
 /* Базовые стили */
 :root {
-    --primary-color: #ff9100;
-    --primary-color-hover: #c05a1f;
-    --secondary-color: #C4A484;
-    --dark-color: #2A1A1F;
+    --primary-color: #a940ff;
+    --primary-color-hover: #bb6ffa;
+    --secondary-color: #b095c7;
+    --dark-color: #1a1013;
     --light-color: #F5F5F5;
     --white-color: #FFFFFF;
-    --text-color: #333333;
-    --gray-color: #999999;
+    --text-color: #1f1f1f;
+    --gray-color: #313131;
     --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     --transition: all 0.3s ease;
 }
@@ -19,14 +19,14 @@
 }
 
 body {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Nunito';
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--light-color);
 }
 
 h1, h2, h3, h4 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Noto Sans';
     font-weight: 700;
 }
 
@@ -69,7 +69,7 @@ ul {
 }
 
 .btn--primary:hover {
-    background-color: #5a3d2c;
+    background-color: #bb6ffa;
     transform: translateY(-2px);
     box-shadow: var(--shadow);
 }
@@ -173,6 +173,30 @@ ul {
     z-index: 1001;
 }
 
+#burger-menu{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    padding: 75px 15px 0;
+    background: white;
+    height: 100%;
+    box-shadow: 0px 0px 10px black;
+    transition: var(--transition);
+}
+
+#burger-menu a{
+    font-size: 12px;
+    padding: 0;
+    font-weight: 500;
+}
+
+.hidden{
+  right: -150px;
+}
+
 .menu-toggle__line {
     display: block;
     width: 25px;
@@ -184,7 +208,7 @@ ul {
 
 /* Герой */
 .hero {
-    background: linear-gradient(rgba(42, 26, 31, 0.7), rgba(42, 26, 31, 0.7)), url('Ссылка на изображение') no-repeat center center/cover;
+    background: linear-gradient(rgba(42, 26, 31, 0.7), rgba(42, 26, 31, 0.7)), url('../images/hero-bg.jpg') no-repeat center center/cover;
     height: 100vh;
     color: var(--white-color);
     display: flex;
@@ -242,6 +266,11 @@ ul {
     transform: scale(1.05);
 }
 
+.about__text__block{
+    display: flex;
+    align-items: baseline;
+}
+
 .about__text {
     margin-bottom: 20px;
 }
@@ -252,7 +281,7 @@ ul {
 
 .feature-item {
     display: flex;
-    align-items: center;
+    align-items: baseline;
     margin-bottom: 15px;
 }
 

@@ -7,7 +7,7 @@
     <title>Название сайта</title>
 
     <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@400;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="css/reset.css">
@@ -18,21 +18,28 @@
     <header class="header">
         <div class="container">
             <div class="header__inner">
-                <a href="#" class="logo">Название<span>сайта</span></a>
+                <a href="#" class="logo">Антикафе<span> Кубит</span></a>
                 <nav class="nav">
                     <ul class="nav__list">
-                        <li class="nav__item"><a href="#" class="nav__link">ссылка 1</a></li>
-                        <li class="nav__item"><a href="#menu" class="nav__link">ссылка 2</a></li>
-                        <li class="nav__item"><a href="#about" class="nav__link">ссылка 3</a></li>
-                        <li class="nav__item"><a href="#reviews" class="nav__link">ссылка 4</a></li>
-                        <li class="nav__item"><a href="#contacts" class="nav__link">ссылка 5</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">Главная</a></li>
+                        <li class="nav__item"><a href="#menu" class="nav__link">Забронировать</a></li>
+                        <li class="nav__item"><a href="#about" class="nav__link">О нас</a></li>
+                        <li class="nav__item"><a href="#reviews" class="nav__link">Отзывы</a></li>
+                        <li class="nav__item"><a href="#contacts" class="nav__link">Контакты</a></li>
                     </ul>
                 </nav>
-                <button class="menu-toggle" aria-label="Меню">
+                <button id="burger-toggle" class="menu-toggle" aria-label="Меню">
                     <span class="menu-toggle__line"></span>
                     <span class="menu-toggle__line"></span>
                     <span class="menu-toggle__line"></span>
                 </button>
+                <div id="burger-menu" class="hidden" style="right: -150px;">
+                    <a href="#" class="nav__link">Главная</a>
+                    <a href="#menu" class="nav__link">Забронировать</a>
+                    <a href="#about" class="nav__link">О нас</a>
+                    <a href="#reviews" class="nav__link">Отзывы</a>
+                    <a href="#contacts" class="nav__link">Контакты</a>
+                </div>
             </div>
         </div>
     </header>
@@ -40,11 +47,11 @@
     <main class="main">
         <section class="hero">
             <div class="container">
-                <h1 class="hero__title">Заголовок сайта</h1>
-                <p class="hero__subtitle">Подзаголовок (описание) сайта</p>
+                <h1 class="hero__title">Антикафе Кубит</h1>
+                <p class="hero__subtitle">Ваши любимые настольные игры, PlayStation, Xbox в одном месте.</p>
                 <div class="hero__buttons">
-                    <a href="#menu" class="btn btn--primary">Ссылка на 2 блок</a>
-                    <a href="#contacts" class="btn btn--outline">Ссылка на подвал</a>
+                    <a href="#menu" class="btn btn--primary">Забронировать</a>
+                    <a href="#contacts" class="btn btn--outline">Как нас найти?</a>
                 </div>
             </div>
         </section>
@@ -53,24 +60,37 @@
             <div class="container">
                 <div class="about__inner">
                     <div class="about__image">
-                        <img src="..." alt="">
+                        <img src="images/about-image.jpg" alt="">
                     </div>
                     <div class="about__content">
-                        <h2 class="section-title">Заголовок 2 уровня</h2>
-                        <p class="about__text">Описание сайта</p>
-                        <p class="about__text">Описание сайта</p>
+                        <h2 class="section-title">Почему к нам стоит зайти</h2>
+                        <div class="about__text__block">
+                            <i class="fa-regular fa-face-smile"></i>&nbsp;&nbsp;
+                            <p class="about__text">Настольные игры - это отличный способ провести время вместе, развить логику, память и стратегическое мышление. Они не только развлекают, но и помогают улучшить навыки общения, научиться работать в команде и даже справляться с поражениями.</p>
+                        </div>
+                        <div class="about__text__block">
+                            <i class="fa-regular fa-face-smile"></i>&nbsp;&nbsp;
+                            <p class="about__text">Игровые приставки - это простой и удобный способ погрузиться в мир видеоигр. Посетители могут выбирать между играми в одиночку или в компании, а также устраивать турниры.</p>
+                        </div>
                         <ul class="about__features">
                             <li class="feature-item">
                                 <span></span>
                             </li>
                             <li class="feature-item">
-                                <span>Достоинства продукта</span>
+                                <i class="fa-regular fa-square-check"></i>&nbsp;&nbsp;
+                                <span>Наше антикафе оформлено в домашнем стиле, создавая комфортную и расслабляющую обстановку для отдыха и общения. </span>
                             </li>
                             <li class="feature-item">
-                                <span>Достоинства продукта</span>
+                                <i class="fa-regular fa-square-check"></i>&nbsp;&nbsp;
+                                <span>Мы расположены в центре города и работаем в удобное для Вас время, включая выходные дни. </span>
                             </li>
                             <li class="feature-item">
-                                <span>Достоинства продукта</span>
+                                <i class="fa-regular fa-square-check"></i>&nbsp;&nbsp;
+                                <span>Наше антикафе может стать для вас местом для новых знакомств, проведения творческих вечеров, лекций и тренингов.</span>
+                            </li>
+                            <li class="feature-item">
+                                <i class="fa-regular fa-square-check"></i>&nbsp;&nbsp;
+                                <span>Бесплатные чай, кофе, печенье.</span>
                             </li>
                         </ul>
                     </div>
@@ -80,50 +100,50 @@
 
         <section id="menu" class="menu">
             <div class="container">
-                <h2 class="section-title">Карточки</h2>
+                <h2 class="section-title">Бронирование</h2>
                 <div class="menu__content active" id="coffee">
                     <div class="menu__grid">
                         <div class="menu-item">
                             <div class="menu-item__header">
-                                <h3 class="menu-item__title">Карточка №1</h3>
-                                <span class="menu-item__price">цена или доп.инфо</span>
+                                <h3 class="menu-item__title">Стол на 2 часа</h3>
+                                <span class="menu-item__price">250&nbsp;рублей</span>
                             </div>
-                            <p class="menu-item__description">Описание карточки</p>
+                            <p class="menu-item__description">Быстрый стол для небольших игр</p>
                         </div>
                         <div class="menu-item">
                             <div class="menu-item__header">
-                                <h3 class="menu-item__title">Карточка №2</h3>
-                                <span class="menu-item__price">цена или доп.инфо</span>
+                                <h3 class="menu-item__title">Стол на 4 часа</h3>
+                                <span class="menu-item__price">400&nbsp;рублей</span>
                             </div>
-                            <p class="menu-item__description">Описание карточки</p>
+                            <p class="menu-item__description">Стол для погружения в крупную настольную игру</p>
                         </div>
                         <div class="menu-item">
                             <div class="menu-item__header">
-                                <h3 class="menu-item__title">Карточка №3</h3>
-                                <span class="menu-item__price">цена или доп.инфо</span>
+                                <h3 class="menu-item__title">Стол на весь день</h3>
+                                <span class="menu-item__price">1500&nbsp;рублей</span>
                             </div>
-                            <p class="menu-item__description">Описание карточки</p>
+                            <p class="menu-item__description">Ваш уютный уголок на весь день</p>
                         </div>
                         <div class="menu-item">
                             <div class="menu-item__header">
-                                <h3 class="menu-item__title">Карточка №4</h3>
-                                <span class="menu-item__price">цена или доп.инфо</span>
+                                <h3 class="menu-item__title">PlayStation/Xbox на&nbsp;2&nbsp;часа</h3>
+                                <span class="menu-item__price">350&nbsp;рублей</span>
                             </div>
-                            <p class="menu-item__description">Описание карточки</p>
+                            <p class="menu-item__description">Размяться в Beat Saber, вам сюда.</p>
                         </div>
                         <div class="menu-item">
                             <div class="menu-item__header">
-                                <h3 class="menu-item__title">Карточка №5</h3>
-                                <span class="menu-item__price">цена или доп.инфо</span>
+                                <h3 class="menu-item__title">PlayStation/Xbox на&nbsp;4&nbsp;часа</h3>
+                                <span class="menu-item__price">600&nbsp;рублей</span>
                             </div>
-                            <p class="menu-item__description">Описание карточки</p>
+                            <p class="menu-item__description">Подходит для сессионного прохождения любимых игр</p>
                         </div>
                         <div class="menu-item">
                             <div class="menu-item__header">
-                                <h3 class="menu-item__title">Карточка №6</h3>
-                                <span class="menu-item__price">цена или доп.инфо</span>
+                                <h3 class="menu-item__title">PlayStation/Xbox на&nbsp;весь&nbsp;день</h3>
+                                <span class="menu-item__price">2000&nbsp;рублей</span>
                             </div>
-                            <p class="menu-item__description">Описание карточки</p>
+                            <p class="menu-item__description">Все коллекционные предметы ваши. Вас не остановить!</p>
                         </div>
                     </div>
                 </div>
@@ -143,11 +163,11 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                         </div>
-                        <p class="review__text">Текст отзыва</p>
+                        <p class="review__text">Отличное место для вечерних посиделок! PS5, настолки — всё в одном, и атмосфера уютная.</p>
                         <div class="review__author">
-                            <img src="Вставьте фото" alt=""
+                            <img src="images/review-1.webp" alt=""
                                 class="review__photo">
-                            <span class="review__name">Имя</span>
+                            <span class="review__name">Марина К.</span>
                         </div>
                     </div>
                     <div class="review">
@@ -158,11 +178,11 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                         </div>
-                        <p class="review__text">Текст отзыва</p>
+                        <p class="review__text">Играли с друзьями на Xbox, время пролетело незаметно. Вернёмся ещё!</p>
                         <div class="review__author">
-                            <img src="Вставьте фото" alt=""
+                            <img src="images/review-3.jfif" alt=""
                                 class="review__photo">
-                            <span class="review__name">Имя</span>
+                            <span class="review__name">Андрей М.</span>
                         </div>
                     </div>
                     <div class="review">
@@ -173,11 +193,11 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                         </div>
-                        <p class="review__text">Текст отзыва</p>
+                        <p class="review__text">Крутое антикафе! Большой выбор настольных игр и топовая техника. Рекомендую.</p>
                         <div class="review__author">
-                            <img src="Вставьте фото" alt=""
+                            <img src="images/review-2.jfif" alt=""
                                 class="review__photo">
-                            <span class="review__name">Имя</span>
+                            <span class="review__name">Дмитрий С.</span>
                         </div>
                     </div>
                 </div>
@@ -191,19 +211,19 @@
                         <h2 class="section-title">Контакты</h2>
                         <div class="contact-item">
                             <i class="fas fa-map-marker-alt contact-icon"></i>
-                            <span>улица</span>
+                            <span>г. Вологда, ул. Козлёнская, д. 30</span>
                         </div>
                         <div class="contact-item">
                             <i class="fas fa-phone contact-icon"></i>
-                            <span>телефон</span>
+                            <span>+7-911-543-21-12</span>
                         </div>
                         <div class="contact-item">
                             <i class="fas fa-envelope contact-icon"></i>
-                            <span>почта</span>
+                            <span>cubit35@yandex.ru</span>
                         </div>
                         <div class="contact-item">
                             <i class="fas fa-clock contact-icon"></i>
-                            <span>часы работы</span>
+                            <span>Работаем с 10:00 до 20:00</span>
                         </div>
                         <div class="social-links">
                             <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
@@ -214,7 +234,7 @@
                     </div>
                     <div class="contacts__map">
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2245.373789929819!2d37.61842331593077!3d55.75370398055291!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a5a738fa419%3A0x7c347d506f52311f!2z0JrRgNCw0YHQvdCw0Y8g0JrQvtC80L_RjtGA0L7QstGB0LrQsNGP!5e0!3m2!1sru!2sru!4v1620000000000!5m2!1sru!2sru"
+                            src="https://www.google.com/maps/embed/v1/place?q=Vologda,+Россия,+Козленская+30&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
                             width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                     </div>
                 </div>
@@ -226,17 +246,17 @@
         <div class="container">
             <div class="footer__inner">
                 <div class="footer__logo">
-                    <a href="#" class="logo">Название<span>сайта</span></a>
-                    <p class="footer__text">Подзаголовок сайта</p>
+                    <a href="#" class="logo">Антикафе<span> Кубит</span></a>
+                    <p class="footer__text">Ваши любимые настольные игры, PlayStation, Xbox в одном месте.</p>
                 </div>
                 <div class="footer__nav">
                     <h3 class="footer__title">Навигация</h3>
                     <ul class="footer__list">
-                        <li><a href="#" class="footer__link">меню 1</a></li>
-                        <li><a href="#menu" class="footer__link">меню 2</a></li>
-                        <li><a href="#about" class="footer__link">меню 3</a></li>
-                        <li><a href="#reviews" class="footer__link">меню 4</a></li>
-                        <li><a href="#contacts" class="footer__link">меню 5</a></li>
+                        <li><a href="#" class="footer__link">Главная</a></li>
+                        <li><a href="#menu" class="footer__link">Забронировать</a></li>
+                        <li><a href="#about" class="footer__link">О нас</a></li>
+                        <li><a href="#reviews" class="footer__link">Отзывы</a></li>
+                        <li><a href="#contacts" class="footer__link">Контакты</a></li>
                     </ul>
                 </div>
                 <div class="footer__subscribe">
@@ -249,12 +269,13 @@
                 </div>
             </div>
             <div class="footer__bottom">
-                <p class="footer__copyright">© Copyright</p>
+                <p class="footer__copyright">© Copyright 2025. Все права защищены.</p>
             </div>
         </div>
     </footer>
 
-
+    <script src="js/burger-menu.js"></script>
+    <script src="js/burger-menu-mouse-out.js"></script>
 </body>
 
 </html>
